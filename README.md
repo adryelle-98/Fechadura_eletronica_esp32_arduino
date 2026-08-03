@@ -2,12 +2,14 @@
 Sistema de fechadura eletrônica com dois pontos de acesso — teclado físico (LCD Keypad Shield) e página web — controlados por uma única senha sincronizada.
 O projeto foi desenvolvido utilizando ESP32 como controlador principal e Arduino Uno como terminal de entrada local, simulando o funcionamento de uma fechadura eletrônica residencial.
 
+
 # Visão Geral
 O sistema permite que a porta seja destrancada por dois meios diferentes:
   Teclado físico utilizando um LCD Keypad Shield conectado ao Arduino Uno.
   Página web hospedada pela ESP32 acessível pela rede Wi-Fi.
 A senha é armazenada exclusivamente na ESP32, garantindo que ambos os métodos de acesso utilizem sempre a mesma autenticação.
 Além disso, o sistema monitora o estado da porta através de um sensor de efeito Hall e controla automaticamente o travamento utilizando um servomotor.
+
 
 # Principais Funcionalidades
 Login por senha através do teclado físico.
@@ -21,6 +23,7 @@ Alarme sonoro quando a porta permanece aberta por muito tempo.
 Sistema de segurança contra tentativas de invasão.
 Bloqueio temporário após três senhas incorretas consecutivas.
 Armazenamento permanente da senha utilizando a memória não-volátil (Preferences) da ESP32.
+
 
 # Arquitetura do Sistema
 
@@ -48,6 +51,7 @@ Armazenamento permanente da senha utilizando a memória não-volátil (Preferenc
                 │ Shield       │
                 └──────────────┘
 
+
 # Componentes Utilizados
 Hardware
 ESP32
@@ -60,6 +64,7 @@ LEDs indicador verde e vermelho
 Protoboard
 Jumpers
 Fonte de alimentação
+
 
 # Funcionamento
 1. Inicialização
@@ -101,6 +106,7 @@ Caso ocorram três tentativas consecutivas com senha incorreta:
 Se a porta permanecer aberta além do tempo permitido:
   - o buzzer emite avisos periódicos até que ela seja fechada.
 
+
 # Possíveis Melhorias
 Cadastro de múltiplos usuários.
 Histórico de acessos.
@@ -110,6 +116,7 @@ Leitor biométrico.
 Integração com MQTT e IoT.
 Notificações pelo celular.
 Registro de eventos em banco de dados.
+
 
 ## Integrantes
 Projeto desenvolvido pelos alunos da Faculdade de Engenharia Elétrica (FEELT) da Universidade Federal de Uberlândia (UFU):
